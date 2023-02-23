@@ -38,7 +38,7 @@ const editPlayer1BtnElement = document.getElementById('edit-player-1-btn');
 const editPlayer2BtnElement = document.getElementById('edit-player-2-btn');
 const playerCancelBtnElement = document.getElementById('cancelBtn');
 const playerInputElement = document.getElementById('playername');
-const startNewGameElement = document.getElementById('startBtn');
+const startNewGameBtnElement = document.getElementById('startBtn');
 const gameFieldElements = document.querySelectorAll('#game-board li');
 const activePlayerDisplayElement = document.getElementById('active-player-name');
 const gameOverDisplayElement = document.getElementById('game-over');
@@ -56,7 +56,7 @@ backdropElement.addEventListener('click',closePlayerConfig);
 
 formElement.addEventListener('submit',savePlayerConfig);
 
-startNewGameElement.addEventListener('click',startNewGame);
+startNewGameBtnElement.addEventListener('click',startNewGame);
 
 for (element of gameFieldElements) {
   element.addEventListener('click',selectedGameField);

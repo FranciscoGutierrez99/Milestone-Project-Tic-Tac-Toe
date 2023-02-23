@@ -18,6 +18,7 @@ function startNewGame() {
   winnerPlayerDisplayElement.style.display = 'none';
   roundCounter = 1;
   turnDisplayElement.style.display = 'block';
+  startNewGameBtnElement.textContent = 'Start New Game'
 
 }
 
@@ -69,6 +70,7 @@ function checkForGameOver() {
       gameData[i][0] === gameData[i][1] &&
       gameData[i][1] === gameData[i][2]
     ) {
+      turnDisplayElement.style.display = 'none'; //Next turn not displayed
       gameOverDisplayElement.style.display = 'block';
       winnerPlayerDisplayElement.style.display = 'block';
       winnerTextDisplayElement.style.display = 'block';
@@ -85,6 +87,7 @@ function checkForGameOver() {
       gameData[0][i] === gameData[1][i] &&
       gameData[0][i] === gameData[2][i]
     ) {
+      turnDisplayElement.style.display = 'none'; //Next turn not displayed
       gameOverDisplayElement.style.display = 'block';
       winnerPlayerDisplayElement.style.display = 'block';
       winnerTextDisplayElement.style.display = 'block';
@@ -102,6 +105,7 @@ function checkForGameOver() {
     gameData[0][0] === gameData[1][1] &&
     gameData[1][1] === gameData[2][2]
   ) {
+    turnDisplayElement.style.display = 'none'; //Next turn not displayed
     gameOverDisplayElement.style.display = 'block';
     winnerPlayerDisplayElement.style.display = 'block';
     winnerTextDisplayElement.style.display = 'block';
@@ -118,6 +122,7 @@ function checkForGameOver() {
     gameData[2][0] === gameData[1][1] &&
     gameData[1][1] === gameData[0][2]
   ) {
+    turnDisplayElement.style.display = 'none'; //Next turn not displayed
     gameOverDisplayElement.style.display = 'block';
     winnerPlayerDisplayElement.style.display = 'block';
     winnerTextDisplayElement.style.display = 'block';
