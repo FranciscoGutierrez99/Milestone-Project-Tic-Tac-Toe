@@ -75,6 +75,7 @@ function checkForGameOver() {
       gameOverDisplayElement.style.display = 'block';
       winnerPlayerDisplayElement.style.display = 'block';
       winnerPlayerDisplayElement.textContent = players[gameData[i][0] - 1].name;
+      return;
       // return gameData[i][0];
     }
   }
@@ -88,6 +89,7 @@ function checkForGameOver() {
       gameOverDisplayElement.style.display = 'block';
       winnerPlayerDisplayElement.style.display = 'block';
       winnerPlayerDisplayElement.textContent = players[gameData[0][i] - 1].name;
+      return;
       // return gameData[0][i];
     }
   }
@@ -102,6 +104,7 @@ function checkForGameOver() {
     gameOverDisplayElement.style.display = 'block';
     winnerPlayerDisplayElement.style.display = 'block';
     winnerPlayerDisplayElement.textContent = players[gameData[0][0] - 1].name;
+    return;
     // return gameData[0][0];
   }
 
@@ -115,6 +118,7 @@ function checkForGameOver() {
     gameOverDisplayElement.style.display = 'block';
     winnerPlayerDisplayElement.style.display = 'block';
     winnerPlayerDisplayElement.textContent = players[gameData[2][0] - 1].name;
+    return;
     // return gameData[2][0];
   }
 
@@ -123,6 +127,7 @@ function checkForGameOver() {
     gameOverDisplayElement.style.display = 'block';
     gameOverDisplayElement.children[0].textContent = 'DRAW';
     winnerPlayerDisplayElement.style.display = 'none';
+    return;
     // return -1;
   }
 
