@@ -44,6 +44,8 @@ const activePlayerDisplayElement = document.getElementById('active-player-name')
 const gameOverDisplayElement = document.getElementById('game-over');
 const winnerPlayerDisplayElement = document.getElementById('winner-name');
 const turnDisplayElement = document.getElementById('turn-paragraph');
+const drawDisplayElement = document.getElementById('draw');
+const winnerTextDisplayElement = document.getElementById('winner-text');
 
 
 editPlayer1BtnElement.addEventListener('click',openPlayerConfig);

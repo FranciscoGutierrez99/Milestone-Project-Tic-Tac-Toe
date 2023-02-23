@@ -41,16 +41,13 @@ function selectedGameField(event) {
   if (selectedField.textContent) {
     return;
   }
-  
-    
-  
-  
   event.target.textContent = players[activePlayer].symbol;
   event.target.classList.add("disabled");
   gameData[selectedRow][selectedColumn] = activePlayer + 1;
   
   const winnerId = checkForGameOver();
   console.log(winnerId);
+  console.log(roundCounter);
   roundCounter++;
   switchedPlayer();
   activePlayerDisplay();
@@ -74,8 +71,10 @@ function checkForGameOver() {
     ) {
       gameOverDisplayElement.style.display = 'block';
       winnerPlayerDisplayElement.style.display = 'block';
+      winnerTextDisplayElement.style.display = 'block';
+      drawDisplayElement.style.display = 'none';
       winnerPlayerDisplayElement.textContent = players[gameData[i][0] - 1].name;
-      return;
+      
       // return gameData[i][0];
     }
   }
@@ -88,8 +87,10 @@ function checkForGameOver() {
     ) {
       gameOverDisplayElement.style.display = 'block';
       winnerPlayerDisplayElement.style.display = 'block';
+      winnerTextDisplayElement.style.display = 'block';
+      drawDisplayElement.style.display = 'none';
       winnerPlayerDisplayElement.textContent = players[gameData[0][i] - 1].name;
-      return;
+      
       // return gameData[0][i];
     }
   }
@@ -103,8 +104,10 @@ function checkForGameOver() {
   ) {
     gameOverDisplayElement.style.display = 'block';
     winnerPlayerDisplayElement.style.display = 'block';
+    winnerTextDisplayElement.style.display = 'block';
+    drawDisplayElement.style.display = 'none';
     winnerPlayerDisplayElement.textContent = players[gameData[0][0] - 1].name;
-    return;
+    
     // return gameData[0][0];
   }
 
@@ -117,18 +120,18 @@ function checkForGameOver() {
   ) {
     gameOverDisplayElement.style.display = 'block';
     winnerPlayerDisplayElement.style.display = 'block';
+    winnerTextDisplayElement.style.display = 'block';
+    drawDisplayElement.style.display = 'none';
     winnerPlayerDisplayElement.textContent = players[gameData[2][0] - 1].name;
-    return;
+    
     // return gameData[2][0];
   }
 
   if (roundCounter === 9) {
-    turnDisplayElement.style.display = 'none';
-    gameOverDisplayElement.style.display = 'block';
-    gameOverDisplayElement.children[0].textContent = 'DRAW';
-    winnerPlayerDisplayElement.style.display = 'none';
-    return;
-    // return -1;
+    turnDisplayElement.style.display = 'none'; //Next turn not displayed
+    gameOverDisplayElement.style.display = 'block'; //Show game over overlay
+    drawDisplayElement.style.display = 'block' // show the draw 
+    winnerTextDisplayElement.style.display = 'none'; //hide the player winner
   }
 
   return 0;
