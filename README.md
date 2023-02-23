@@ -1,2 +1,2 @@
 # Project-Tic-Tac-Toe
-[tictactoefjgl.netlify.app](tictactoefjgl.netlify.app)
+[Link to netlify here](https://tictactoefl.netlify.app)
