@@ -42,6 +42,13 @@ function selectedGameField(event) {
   if (selectedField.textContent) {
     return;
   }
+
+  if (gameOverDisplayElement.style.display === 'block'){
+    return;
+  }
+
+  
+
   event.target.textContent = players[activePlayer].symbol;
   event.target.classList.add("disabled");
   gameData[selectedRow][selectedColumn] = activePlayer + 1;
