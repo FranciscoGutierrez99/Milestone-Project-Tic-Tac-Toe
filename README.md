@@ -1,2 +1,2 @@
 # Project-Tic-Tac-Toe
-[Link game here](https://tictactoefl.netlify.app)
+[Link to play here](https://tictactoefl.netlify.app)
